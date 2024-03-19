@@ -1,13 +1,13 @@
 import requests
 import threading
 
-# Function to send messages without delay
+# sends a message to the webhook inserted
 def send_message(webhook_url):
     while running:
-        # Message to send
+        # can edit the message
         message = "My webhook n000000000000000000000000000000000000000000000000wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
 
-        # Sending a POST request to the webhook URL
+        # Sends a POST request to the webhook URL
         requests.post(webhook_url, json={"content": message})
 
         # You can print a message here if you want to confirm that messages are being sent
@@ -30,7 +30,7 @@ def main():
     global running
     running = False
 
-    # Prompt user to enter the webhook URL
+    # makes the user enter the webhook url
     input("Enter the webhook URL and press ENTER to continue: ")
     webhook_url = input("Enter the webhook URL: ")
 
